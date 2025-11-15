@@ -22,6 +22,8 @@ class UpdateProductRequest extends FormRequest
      */
     public function rules(): array
     {
+        $productId = $this->route('product')->id ?? $this->route('product');
+
         return [
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
@@ -30,7 +32,7 @@ class UpdateProductRequest extends FormRequest
             'sku' => [
                 'required',
                 'string',
-                Rule::unique('products')->ignore($this->product)
+                Rule::unique('products')->ignore($productId)
             ],
             'category' => 'required|string|max:255',
             'images' => 'nullable|array',
@@ -42,6 +44,7 @@ class UpdateProductRequest extends FormRequest
             'specifications' => 'nullable|array'
         ];
     }
+
     public function messages(): array
     {
         return [

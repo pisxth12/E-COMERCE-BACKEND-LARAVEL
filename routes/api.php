@@ -22,6 +22,8 @@ Route::prefix('products')->group(function () {
     Route::post('bulk-delete', [ProductController::class, 'bulkDelete']);
     Route::patch('{product}/status', [ProductController::class, 'updateStatus']);
     Route::get('search/{search}', [ProductController::class, 'search']);
+    // ADD THIS LINE: Handle POST requests with _method=PUT
+    Route::post('{product}', [ProductController::class, 'update']);
 });
 Route::apiResource('products', ProductController::class);
 
