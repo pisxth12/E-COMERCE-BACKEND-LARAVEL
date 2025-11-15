@@ -18,7 +18,13 @@ return new class extends Migration
             $table->decimal('price', 10, 2);
             $table->integer('stock')->default(0);
             $table->string('sku')->unique(); //SKU (Stock Keeping Unit)
+            $table->string('category');
+            $table->string('brand');
+            $table->string('image')->nullable();
+            $table->enum('status', ['active', 'inactive', 'out_of_stock'])->default('active');
+            $table->json('scpecifications')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
