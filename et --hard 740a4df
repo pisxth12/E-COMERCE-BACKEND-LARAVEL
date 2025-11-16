@@ -1,0 +1,8 @@
+[33mf1e0257[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mSornPiseth[m[33m)[m Merge branch 'main' of https://github.com/pisxth12/E-COMERCE-BACKEND-LARAVEL into SornPiseth # Please enter a commit message to explain why this merge is necessary, # especially if it merges an updated upstream into a topic branch. # # Lines starting with '#' will be ignored, and an empty message aborts # the commit.
+[33m740a4df[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m add product CRUD success
+[33m6360007[m Product controller added
+[33m29cfb2e[m before create product and user all success
+[33mf0e2be0[m fix error update and add success
+[33mbeeed12[m cconfig core
+[33m827e69c[m first add user
+[33m4ec4366[m first commit
