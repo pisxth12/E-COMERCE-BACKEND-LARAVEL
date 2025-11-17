@@ -47,7 +47,7 @@ class Order extends Model
 
 
     //Scope for order status
-    public function scopeOrderStatus(Builder $query , string $status = null){
+    public function scopeByStatus(Builder $query , string $status = null){
         if($status){
             return $query->where('order_status' , 'like' , "%$status%");
         }
@@ -66,7 +66,7 @@ class Order extends Model
     }
 
     //Scope for customer 
-    public function scopeCustomer(Builder $query , int $customerId = null){
+    public function scopeByCustomer(Builder $query , int $customerId = null){
         if($customerId){
             return $query->where('customer_id' , $customerId);
         }

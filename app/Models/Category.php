@@ -29,5 +29,11 @@ class Category extends Model
         return $query;
     }
 
+    //Active scope
+    public function scopeActive(Builder $query){
+        return $query->where('status' , 'active');
+    }
+
+
 }
 
